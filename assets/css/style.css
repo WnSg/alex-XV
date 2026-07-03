@@ -1,0 +1,2887 @@
+:root {
+      --blue: #2f91a4;
+      --blue-dark: #076f84;
+      --blue-soft: #cfe3f6;
+      --pink: #f5e4e8;
+      --pink-soft: #fff4f6;
+      --rose: #eaa7bf;
+      --pink-strong: #db5b9c;
+      --pink-medium: #e79abc;
+      --pink-light: #f3d5e0;
+      --leaf: #8fa69a;
+      --leaf-dark: #6e8578;
+      --leaf-soft: #b7c7bc;
+      --gold: #b89b63;
+      --lavender: #918dc6;
+      --cream: #fffdf9;
+      --text: #244d56;
+      --white: #ffffff;
+      --shadow: 0 18px 36px rgba(39, 67, 77, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--cream) 0%, var(--pink-soft) 46%, #ffffff 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .script {
+      font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+      font-weight: 400;
+      line-height: 0.96;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: clamp(0.8rem, 3vw, 2rem) 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top left, rgba(255, 226, 236, .85), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(207, 227, 246, .72), transparent 38%),
+        linear-gradient(135deg, #fff7f8, #f7eef1 55%, #fffdf9);
+      overflow: hidden;
+    }
+
+    .hero-frame {
+      width: min(640px, 94vw);
+      position: relative;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--pink-soft);
+    }
+
+    .hero-art {
+      width: 100%;
+      display: block;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+    }
+
+    .hero-title-card {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(1.1rem, 4vw, 2rem);
+      transform: translateX(-50%);
+      width: min(86%, 620px);
+      padding: clamp(1rem, 3vw, 1.45rem) 1rem;
+      text-align: center;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 12px 26px rgba(36, 77, 86, 0.13);
+    }
+
+    .hero-eyebrow {
+      margin-bottom: .55rem;
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-weight: 700;
+      color: var(--blue-dark);
+    }
+
+    .hero-name {
+      margin: 0;
+      font-size: clamp(3.1rem, 10vw, 6.8rem);
+      color: var(--blue-dark);
+      text-shadow: 0 2px 0 rgba(255, 255, 255, .75);
+    }
+
+    .hero-meta {
+      margin: .7rem 0 0;
+      font-size: clamp(.95rem, 2.6vw, 1.16rem);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .hero-frame-soft {
+      background: #ffffff;
+      border-radius: 28px;
+    }
+
+    .hero-art-soft {
+      aspect-ratio: 1156 / 1600;
+      object-fit: cover;
+      background: #ffffff;
+    }
+
+    .hero-cover-content {
+      position: absolute;
+      top: 19%;
+      right: 10%;
+      bottom: 10%;
+      left: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      pointer-events: none;
+      color: var(--blue-dark);
+      transform: translateY(1.5%);
+    }
+
+    .hero-mask-svg {
+      width: min(45%, 230px);
+      height: auto;
+      margin-bottom: clamp(.75rem, 2.6vw, 1.15rem);
+      stroke: var(--gold);
+      fill: rgba(255, 248, 250, .62);
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 7px 10px rgba(184, 155, 99, .14));
+      opacity: .88;
+    }
+
+    .hero-mask-svg .mask-dot {
+      fill: rgba(234, 167, 191, .76);
+      stroke: var(--gold);
+      stroke-width: 3;
+    }
+
+    .cover-kicker {
+      margin-bottom: .45rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(.78rem, 2.15vw, 1.12rem);
+      text-transform: uppercase;
+      letter-spacing: .42em;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .cover-years {
+      margin-bottom: clamp(.85rem, 2.4vw, 1.15rem);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.95rem, 6.4vw, 3.65rem);
+      line-height: 1;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .cover-name {
+      margin: 0;
+      font-size: clamp(3.1rem, 10.2vw, 6.3rem);
+      line-height: .92;
+      color: #173f70;
+      text-shadow: 0 2px 0 rgba(255, 255, 255, .75);
+      font-weight: 400;
+    }
+
+    .cover-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .7rem;
+      width: min(280px, 64%);
+      margin-top: clamp(.9rem, 2.8vw, 1.3rem);
+      color: var(--gold);
+    }
+
+    .cover-ornament span {
+      display: block;
+      height: 1px;
+      flex: 1;
+      background: rgba(184, 155, 99, .56);
+    }
+
+    .cover-ornament strong {
+      color: var(--rose);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .hero-cover-content {
+      top: 12%;
+      right: 8%;
+      bottom: 10%;
+      left: 8%;
+      justify-content: center;
+      transform: translateY(0);
+    }
+
+    .hero-mask-img {
+      display: block;
+      width: min(72%, 405px);
+      height: auto;
+      margin: 0 auto clamp(.75rem, 2.4vw, 1.1rem);
+      object-fit: contain;
+      filter: drop-shadow(0 8px 12px rgba(184, 155, 99, .16));
+    }
+
+    .cover-name {
+      color: #173f70;
+      font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+      font-size: clamp(2.85rem, 9.3vw, 5.75rem);
+      font-weight: 400;
+    }
+    @media (max-width: 460px) {
+      .hero-frame-soft { border-radius: 24px; }
+      .hero-cover-content {
+        top: 20%;
+        right: 9%;
+        bottom: 11%;
+        left: 9%;
+      }
+      .hero-mask-svg { width: 42%; margin-bottom: .65rem; }
+      .hero-mask-img { width: min(76%, 330px); margin-bottom: .65rem; }
+      .cover-kicker { letter-spacing: .30em; }
+      .cover-years { letter-spacing: .12em; }
+    }
+
+    .floral-divider {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      color: rgba(47,145,164,.35);
+      font-size: clamp(2rem, 6vw, 4rem);
+      letter-spacing: .35rem;
+      overflow: hidden;
+    }
+
+    section { padding: clamp(3.4rem, 8vw, 5.2rem) 1.15rem; }
+
+    .container { max-width: 980px; margin: 0 auto; text-align: center; }
+
+    .section-title {
+      display: inline-block;
+      margin: 0 auto 1.8rem;
+      padding: .18rem 1rem .28rem;
+      background: rgba(207, 227, 246, .86);
+      border-radius: 14px;
+      font-size: clamp(3rem, 8vw, 5.2rem);
+      color: var(--blue);
+    }
+
+    .section-title.small { font-size: clamp(2.45rem, 7vw, 4.25rem); }
+
+    .card {
+      width: min(700px, 100%);
+      margin: 0 auto;
+      padding: clamp(1.6rem, 5vw, 2.4rem) clamp(1.2rem, 4vw, 2rem);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .75);
+      box-shadow: var(--shadow);
+    }
+
+    .soft-card { background: var(--pink); }
+
+    .card p {
+      margin: 0 0 1.15rem;
+      font-size: clamp(1.03rem, 2.8vw, 1.33rem);
+      line-height: 1.72;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .prayer {
+      font-size: clamp(1.08rem, 3vw, 1.42rem);
+      line-height: 1.7;
+      font-style: italic;
+      color: var(--blue-dark);
+    }
+
+    .icon-large {
+      font-size: 3.7rem;
+      margin-bottom: 1rem;
+      color: var(--blue);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.3rem;
+      padding: .95rem 1.55rem;
+      min-width: 225px;
+      border-radius: 999px;
+      background: var(--blue-dark);
+      color: #ffffff;
+      font-size: 1.04rem;
+      font-weight: 700;
+      box-shadow: 0 8px 0 rgba(14, 79, 91, .26);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 0 rgba(14,79,91,.22); }
+
+    .technical-note {
+      margin-top: .85rem;
+      font-size: .84rem;
+      line-height: 1.45;
+      color: rgba(36, 81, 91, .64);
+    }
+
+    .date-main {
+      font-size: clamp(3rem, 10vw, 6rem);
+      letter-spacing: .06em;
+      color: var(--lavender);
+      margin: .7rem 0 1rem;
+      font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .7rem;
+      margin-top: 1.5rem;
+    }
+
+    .time-box {
+      background: rgba(207, 227, 246, .83);
+      border-radius: 17px;
+      padding: 1rem .35rem;
+    }
+
+    .time-box strong {
+      display: block;
+      font-size: clamp(1.35rem, 5vw, 2.25rem);
+      color: var(--blue-dark);
+    }
+
+    .time-box span {
+      display: block;
+      margin-top: .32rem;
+      font-size: .7rem;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: rgba(36,81,91,.72);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .photo-placeholder, .location-image, .closing-photo {
+      border: 2px dashed rgba(47, 145, 164, .36);
+      background: linear-gradient(135deg, rgba(207,227,246,.48), rgba(244,229,233,.68));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(36,81,91,.66);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      text-align: center;
+    }
+
+    .photo-placeholder { min-height: 320px; border-radius: 22px; padding: 1rem; font-size: .88rem; }
+
+    .location-image { width: min(360px,100%); min-height: 210px; margin: 0 auto 1.3rem; border-radius: 22px; font-size: .82rem; }
+
+    .location-card h3 { margin: .4rem 0 .2rem; font-size: 1.75rem; color: var(--blue-dark); }
+
+    .location-card p { margin: .35rem 0; }
+
+    .timeline-section { background: var(--blue); color: #ffffff; }
+
+    .timeline-section .section-title { color: #ffffff; background: rgba(255,255,255,.14); }
+
+    .timeline {
+      width: min(560px, 100%);
+      margin: 0 auto;
+      position: relative;
+      padding-left: 1.8rem;
+      text-align: left;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: .2rem;
+      bottom: .2rem;
+      left: .6rem;
+      width: 3px;
+      background: rgba(255,255,255,.88);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      align-items: start;
+    }
+
+    .timeline-icon { font-size: 1.7rem; line-height: 1; }
+    .timeline-item h4 { margin: 0 0 .25rem; font-size: 1.1rem; font-weight: 700; }
+    .timeline-item p { margin: 0; font-size: 1rem; opacity: .95; }
+
+    .itinerary-image-section {
+      background: #f7f7f9;
+      padding: clamp(1rem, 4vw, 2rem) 0;
+    }
+
+    .itinerary-art {
+      display: block;
+      width: min(760px, 100%);
+      height: auto;
+      margin: 0 auto;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .dress-image-card {
+      width: min(720px, 100%);
+      margin: 0 auto;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .dress-code-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .dress-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+
+    .dress-item { background: rgba(255,255,255,.72); border-radius: 22px; padding: 1.35rem 1rem; }
+    .dress-symbol {
+      width: 78px;
+      height: 78px;
+      margin: 0 auto .75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b99655;
+    }
+    .dress-symbol svg {
+      width: 74px;
+      height: 74px;
+      display: block;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .dress-symbol .soft-fill {
+      fill: rgba(185, 150, 85, .10);
+      stroke: currentColor;
+    }
+    .dress-item h4 { color: var(--blue-dark); margin: 0 0 .4rem; font-size: 1.15rem; }
+    .dress-item p { margin: 0; line-height: 1.5; }
+
+    .qr-placeholder {
+      width: 190px;
+      height: 190px;
+      margin: 1.4rem auto .3rem;
+      border-radius: 18px;
+      border: 2px dashed rgba(47,145,164,.45);
+      background: rgba(255,255,255,.66);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(36,81,91,.7);
+    }
+
+    .closing { padding-bottom: 5rem; background: #ffffff; }
+
+    .closing-photo {
+      width: min(470px, 92vw);
+      min-height: 540px;
+      margin: 0 auto;
+      border-radius: 50% / 38%;
+      border: 24px solid rgba(154,154,201,.86);
+      padding: 2rem;
+      font-size: .88rem;
+    }
+
+    .footer-note { margin-top: 2.3rem; font-size: clamp(2.3rem, 7vw, 4.2rem); color: var(--blue); }
+
+    .welcome-section {
+      position: relative;
+      overflow: hidden;
+      background: #f9e7e4;
+      isolation: isolate;
+      padding-top: clamp(7rem, 15vw, 11rem);
+      padding-bottom: clamp(7rem, 15vw, 11rem);
+    }
+
+    .welcome-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 17%, rgba(255, 255, 255, 0.34), transparent 32%),
+        radial-gradient(circle at 18% 82%, rgba(237, 160, 194, 0.12), transparent 35%),
+        radial-gradient(circle at 88% 78%, rgba(237, 160, 194, 0.10), transparent 32%);
+    }
+
+    .welcome-section .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .welcome-section .section-title {
+      background: rgba(249, 231, 228, 0.60);
+      color: #b8904f;
+      border: 1px solid rgba(184, 144, 79, 0.24);
+      box-shadow: none;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.52);
+    }
+
+    .welcome-card {
+      position: relative;
+      z-index: 3;
+      background: #f9e7e4;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding-top: clamp(1.4rem, 4vw, 2.1rem);
+      padding-bottom: clamp(1.4rem, 4vw, 2.1rem);
+    }
+
+    .welcome-card p {
+      font-family: "Times New Roman", Times, serif;
+      font-size: clamp(1.16rem, 3vw, 1.48rem);
+      line-height: 1.76;
+      color: #304f52;
+    }
+
+    .welcome-floral-border {
+      position: absolute;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.92;
+      background-repeat: no-repeat;
+      filter: saturate(0.92) brightness(1.04);
+    }
+
+    .welcome-floral-left {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(76px, 12vw, 145px);
+      background-image: url("../img/img-49592d6b40bd.webp");
+      background-size: cover;
+      background-position: center left;
+    }
+
+    .welcome-floral-right {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: clamp(76px, 12vw, 145px);
+      background-image: url("../img/img-49592d6b40bd.webp");
+      background-size: cover;
+      background-position: center right;
+      transform: scaleX(-1);
+    }
+
+    @media (max-width: 720px) {
+
+      .welcome-section {
+        padding-top: clamp(5.6rem, 22vw, 7rem);
+        padding-bottom: clamp(5.6rem, 22vw, 7rem);
+      }
+
+      .welcome-floral-left,
+      .welcome-floral-right {
+        width: clamp(48px, 14vw, 74px);
+        opacity: 0.78;
+      }
+
+      .hero { align-items: flex-start; padding-top: 1rem; }
+      .hero-frame { border-radius: 26px; }
+      .hero-title-card { bottom: .9rem; border-radius: 20px; padding: .9rem .8rem; }
+      .hero-eyebrow { font-size: .68rem; letter-spacing: .16em; margin-bottom: .35rem; }
+      .hero-meta { font-size: .86rem; }
+      section { padding: 3.4rem 1rem; }
+      .gallery, .dress-grid { grid-template-columns: 1fr; }
+      .photo-placeholder { min-height: 290px; }
+      .countdown { gap: .45rem; }
+      .time-box { padding: .75rem .2rem; }
+      .btn { width: 100%; min-width: unset; }
+      .closing-photo { min-height: 470px; border-width: 18px; }
+      .flower-corner { width: clamp(92px, 31vw, 150px); opacity: 0.64; }
+      .flower-top-left, .flower-bottom-left { left: -1.2rem; }
+      .flower-top-right, .flower-bottom-right { right: -1.2rem; }
+    }
+
+    .welcome-section {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)),
+        url("../img/img-2a74c9f2d68f.webp");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding-top: clamp(6.2rem, 13vw, 9.2rem);
+      padding-bottom: clamp(6.2rem, 13vw, 9.2rem);
+    }
+
+    .welcome-section::before {
+      background: rgba(255,255,255,0.14);
+    }
+
+    .welcome-section .section-title {
+      font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+      color: #076f84;
+      background: rgba(255,255,255,0.30);
+      border: 1px solid rgba(7,111,132,0.14);
+      text-shadow: 0 2px 0 rgba(255,255,255,0.72);
+    }
+
+    .welcome-card {
+      background: rgba(255,255,255,0.36);
+      border-radius: 28px;
+      padding-left: clamp(1.35rem, 4vw, 2.1rem);
+      padding-right: clamp(1.35rem, 4vw, 2.1rem);
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+    }
+
+    .welcome-card p {
+      color: #076f84;
+    }
+
+    .welcome-section .welcome-floral-border {
+      display: none;
+    }
+
+    .location-card {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Ajuste ver18: se retira el icono/marca de agua de fondo en la sección Lugar. */
+.location-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .location-image {
+      overflow: hidden;
+      border-style: solid;
+      border-color: rgba(47, 145, 164, .20);
+      background: rgba(255,255,255,.62);
+    }
+
+    .location-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 210px;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+
+/* Ver18: sección Fecha consolidada */
+section.date-section {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #f9e7e4 !important;
+  background-image: url("../img/img-24dc198aa6a6.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  color: #076f84 !important;
+}
+
+section.date-section::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+section.date-section .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+section.date-section .card,
+section.date-section .soft-card {
+  width: min(680px, 92vw) !important;
+  background: rgba(255, 255, 255, 0.30) !important;
+  border: 1px solid rgba(7, 111, 132, 0.08) !important;
+  border-radius: 30px !important;
+  box-shadow: 0 12px 28px rgba(39, 67, 77, 0.07) !important;
+  backdrop-filter: blur(0.7px) !important;
+  -webkit-backdrop-filter: blur(0.7px) !important;
+}
+
+section.date-section,
+section.date-section p,
+section.date-section h2,
+section.date-section h3,
+section.date-section .section-title,
+section.date-section .date-main,
+section.date-section .date-time-range,
+section.date-section .countdown-heading,
+section.date-section .time-box strong,
+section.date-section .time-box span {
+  color: #076f84 !important;
+}
+
+section.date-section .section-title {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border: 1px solid rgba(7, 111, 132, 0.10) !important;
+  box-shadow: none !important;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.72) !important;
+}
+
+section.date-section .date-main {
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive !important;
+  font-size: clamp(2.65rem, 9vw, 5.25rem) !important;
+  letter-spacing: 0.035em !important;
+  line-height: 1.05 !important;
+  margin: 0.7rem 0 0.65rem !important;
+}
+
+section.date-section .date-time-range {
+  margin: 0.25rem 0 0.2rem !important;
+  font-size: clamp(1.18rem, 4.6vw, 1.55rem) !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.02em !important;
+}
+
+section.date-section .countdown-heading {
+  font-size: clamp(2.45rem, 8.5vw, 3.4rem) !important;
+  line-height: 1 !important;
+  margin: clamp(1.35rem, 5vw, 2rem) 0 0.85rem !important;
+}
+
+section.date-section .time-box {
+  background: rgba(255, 255, 255, 0.42) !important;
+  border: 1px solid rgba(7, 111, 132, 0.10) !important;
+}
+
+@media (max-width: 560px) {
+  section.date-section {
+    min-height: 100svh !important;
+    padding: 2.1rem 0.85rem !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  section.date-section .card,
+  section.date-section .soft-card {
+    width: min(90vw, 410px) !important;
+    padding: 1.25rem 0.85rem !important;
+    background: rgba(255, 255, 255, 0.28) !important;
+    border-radius: 24px !important;
+  }
+
+  section.date-section .section-title.small {
+    font-size: clamp(2.15rem, 14vw, 3.1rem) !important;
+    margin-bottom: 1.05rem !important;
+  }
+
+  section.date-section .date-main {
+    font-size: clamp(2.05rem, 11vw, 3.25rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.015em !important;
+  }
+
+  section.date-section .date-time-range {
+    font-size: clamp(1.05rem, 4.7vw, 1.3rem) !important;
+  }
+
+  section.date-section .countdown {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.58rem !important;
+    width: min(320px, 100%) !important;
+    margin: 0.95rem auto 0 !important;
+  }
+
+  section.date-section .time-box {
+    border-radius: 14px !important;
+    padding: 0.8rem 0.18rem !important;
+  }
+
+  section.date-section .time-box strong {
+    font-size: clamp(1.1rem, 6vw, 1.65rem) !important;
+  }
+
+  section.date-section .time-box span {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.06em !important;
+  }
+}
+
+@media (max-width: 360px) {
+  section.date-section .card,
+  section.date-section .soft-card {
+    padding-left: 0.72rem !important;
+    padding-right: 0.72rem !important;
+  }
+
+  section.date-section .date-main {
+    font-size: 2.05rem !important;
+  }
+
+  section.date-section .countdown {
+    gap: 0.5rem !important;
+  }
+}
+
+    /* Diapositiva 6 - Itinerario ver19: línea de tiempo central sin bullets + íconos enviados */
+    .itinerary-custom-section {
+      background: #ffffff;
+      padding: clamp(1rem, 4vw, 2rem) 0;
+    }
+
+    .itinerary-custom-frame {
+      position: relative;
+      width: min(760px, 100%);
+      min-height: clamp(790px, 190vw, 1060px);
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 0;
+      background: #fffaf8;
+      box-shadow: none;
+    }
+
+    .itinerary-custom-bg {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      background: #fffaf8;
+    }
+
+    .itinerary-custom-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: clamp(1rem, 3vw, 1.85rem) clamp(.8rem, 3.4vw, 1.7rem) clamp(1rem, 3.4vw, 2rem);
+      text-align: center;
+    }
+
+    .itinerary-custom-mask {
+      width: min(22%, 128px);
+      height: auto;
+      margin: 0 auto clamp(.18rem, .7vw, .38rem);
+      object-fit: contain;
+      filter: drop-shadow(0 6px 8px rgba(184, 155, 99, .14));
+    }
+
+    .itinerary-custom-title {
+      margin: 0 0 clamp(.34rem, 1.1vw, .62rem);
+      font-size: clamp(2.25rem, 6.4vw, 4.1rem);
+      color: #173f70;
+      line-height: .95;
+      text-shadow: 0 2px 0 rgba(255, 255, 255, .72);
+    }
+
+    .itinerary-timeline {
+      position: relative;
+      width: min(660px, 91%);
+      margin: 0 auto;
+      display: grid;
+      gap: clamp(.22rem, .75vw, .42rem);
+      padding: .2rem 0 .1rem;
+      flex: 1;
+      align-content: center;
+    }
+
+    .itinerary-timeline::before {
+      content: "";
+      position: absolute;
+      top: clamp(.75rem, 2vw, 1.05rem);
+      bottom: clamp(.75rem, 2vw, 1.05rem);
+      left: 50%;
+      width: 2px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(184, 155, 99, .32), rgba(47, 145, 164, .56), rgba(184, 155, 99, .32));
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, .34);
+      z-index: 1;
+    }
+
+    .itinerary-timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) clamp(20px, 3.8vw, 28px) minmax(0, 1fr);
+      align-items: center;
+      min-height: clamp(67px, 8.7vw, 83px);
+    }
+
+    .itinerary-card {
+      position: relative;
+      z-index: 2;
+      grid-row: 1;
+      display: grid;
+      grid-template-columns: clamp(44px, 7vw, 58px) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(.42rem, 1.1vw, .68rem);
+      width: min(252px, 100%);
+      min-height: clamp(60px, 8vw, 74px);
+      padding: clamp(.35rem, .9vw, .52rem) clamp(.5rem, 1.35vw, .78rem);
+      border-radius: 21px;
+      background: rgba(255, 255, 255, .74);
+      border: 1px solid rgba(184, 155, 99, .30);
+      box-shadow: 0 10px 22px rgba(36, 77, 86, .075);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+
+    .itinerary-timeline-item:nth-child(odd) .itinerary-card {
+      grid-column: 1;
+      justify-self: end;
+      text-align: right;
+      grid-template-columns: minmax(0, 1fr) clamp(44px, 7vw, 58px);
+    }
+
+    .itinerary-timeline-item:nth-child(even) .itinerary-card {
+      grid-column: 3;
+      justify-self: start;
+      text-align: left;
+    }
+
+    .itinerary-timeline-item:nth-child(odd) .itinerary-card::after,
+    .itinerary-timeline-item:nth-child(even) .itinerary-card::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: clamp(12px, 2.5vw, 22px);
+      height: 2px;
+      transform: translateY(-50%);
+      background: rgba(184, 155, 99, .46);
+    }
+
+    .itinerary-timeline-item:nth-child(odd) .itinerary-card::after {
+      right: calc(-1 * clamp(12px, 2.5vw, 22px));
+    }
+
+    .itinerary-timeline-item:nth-child(even) .itinerary-card::after {
+      left: calc(-1 * clamp(12px, 2.5vw, 22px));
+    }
+
+    .itinerary-timeline-item:nth-child(odd) .itinerary-visual {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .itinerary-timeline-item:nth-child(odd) .itinerary-text {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .itinerary-visual {
+      width: clamp(42px, 6.8vw, 56px);
+      height: clamp(42px, 6.8vw, 56px);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      background: radial-gradient(circle at 34% 28%, rgba(255,255,255,.98) 0 22%, rgba(255,246,249,.94) 23% 58%, rgba(246,220,229,.88) 59% 100%);
+      border: 1px solid rgba(184, 155, 99, .26);
+      box-shadow: inset 0 0 0 4px rgba(255,255,255,.38), 0 5px 12px rgba(36,77,86,.08);
+      overflow: hidden;
+    }
+
+    .itinerary-visual img {
+      display: block;
+      width: 96%;
+      height: 96%;
+      object-fit: contain;
+    }
+
+    .itinerary-text {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #304f52;
+      line-height: 1.12;
+    }
+
+    .itinerary-time {
+      display: block;
+      margin-bottom: .12rem;
+      color: #173f70;
+      font-size: clamp(.86rem, 2vw, 1.08rem);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .itinerary-label {
+      display: block;
+      font-size: clamp(.82rem, 1.85vw, 1.02rem);
+      font-style: italic;
+    }
+
+    @media (max-width: 560px) {
+      .itinerary-custom-frame { min-height: 790px; }
+      .itinerary-custom-content { padding: 1.15rem .62rem 1.15rem; }
+      .itinerary-custom-mask { width: min(24%, 98px); }
+      .itinerary-custom-title { font-size: clamp(2.1rem, 10vw, 3.05rem); margin-bottom: .38rem; }
+      .itinerary-timeline { width: 93%; gap: .22rem; }
+      .itinerary-timeline-item { grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr); min-height: 72px; }
+      .itinerary-card { width: min(174px, 100%); min-height: 58px; border-radius: 17px; padding: .32rem .42rem; gap: .32rem; }
+      .itinerary-timeline-item:nth-child(odd) .itinerary-card { grid-template-columns: minmax(0, 1fr) 40px; }
+      .itinerary-timeline-item:nth-child(even) .itinerary-card { grid-template-columns: 40px minmax(0, 1fr); }
+      .itinerary-visual { width: 40px; height: 40px; border-radius: 15px; }
+      .itinerary-time { font-size: .76rem; }
+      .itinerary-label { font-size: .74rem; }
+    }
+
+    @media (max-width: 380px) {
+      .itinerary-custom-frame { min-height: 780px; }
+      .itinerary-timeline { width: 94%; }
+      .itinerary-card { width: min(158px, 100%); }
+      .itinerary-timeline-item:nth-child(odd) .itinerary-card { grid-template-columns: minmax(0, 1fr) 37px; }
+      .itinerary-timeline-item:nth-child(even) .itinerary-card { grid-template-columns: 37px minmax(0, 1fr); }
+      .itinerary-visual { width: 37px; height: 37px; }
+      .itinerary-label { font-size: .70rem; }
+    }
+
+
+    /* Ver19 - ajuste final solicitado: sin bullets y con íconos lineales proporcionados */
+    .itinerary-timeline-item {
+      grid-template-columns: minmax(0, 1fr) clamp(26px, 4.8vw, 38px) minmax(0, 1fr);
+    }
+
+    .itinerary-card {
+      grid-template-columns: clamp(54px, 8vw, 72px) minmax(0, 1fr);
+      min-height: clamp(70px, 9.5vw, 88px);
+    }
+
+    .itinerary-timeline-item:nth-child(odd) .itinerary-card {
+      grid-template-columns: minmax(0, 1fr) clamp(54px, 8vw, 72px);
+    }
+
+    .itinerary-timeline-item:nth-child(even) .itinerary-card {
+      grid-template-columns: clamp(54px, 8vw, 72px) minmax(0, 1fr);
+    }
+
+    .itinerary-visual {
+      width: clamp(52px, 7.8vw, 70px);
+      height: clamp(52px, 7.8vw, 70px);
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .itinerary-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 2px rgba(23, 63, 112, .08));
+    }
+
+    .itinerary-timeline::before {
+      width: 2px;
+      opacity: .88;
+    }
+
+    @media (max-width: 560px) {
+      .itinerary-timeline-item { grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr); }
+      .itinerary-card { width: min(178px, 100%); min-height: 62px; }
+      .itinerary-timeline-item:nth-child(odd) .itinerary-card { grid-template-columns: minmax(0, 1fr) 42px; }
+      .itinerary-timeline-item:nth-child(even) .itinerary-card { grid-template-columns: 42px minmax(0, 1fr); }
+      .itinerary-visual { width: 42px; height: 42px; }
+    }
+
+    @media (max-width: 380px) {
+      .itinerary-timeline-item { grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr); }
+      .itinerary-card { width: min(160px, 100%); }
+      .itinerary-timeline-item:nth-child(odd) .itinerary-card { grid-template-columns: minmax(0, 1fr) 38px; }
+      .itinerary-timeline-item:nth-child(even) .itinerary-card { grid-template-columns: 38px minmax(0, 1fr); }
+      .itinerary-visual { width: 38px; height: 38px; }
+    }
+
+  
+
+/* Ver19 validada - Itinerario: 7 actividades con 7 íconos; sin bullets */
+.itinerary-v19-validated .itinerary-v19-timeline {
+  position: relative;
+  width: min(660px, 92%);
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(.35rem, .9vw, .58rem);
+  padding: .2rem 0 .1rem;
+  flex: 1;
+  align-content: center;
+}
+.itinerary-v19-validated .itinerary-v19-timeline::before {
+  content: "";
+  position: absolute;
+  top: .2rem;
+  bottom: .2rem;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgba(184,155,99,.10), rgba(184,155,99,.72), rgba(184,155,99,.10));
+  border-radius: 99px;
+  z-index: 0;
+}
+.itinerary-v19-validated .itinerary-v19-item {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(22px, 4vw, 30px) minmax(0, 1fr);
+  align-items: center;
+  min-height: clamp(70px, 9.2vw, 88px);
+}
+.itinerary-v19-validated .itinerary-v19-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(.42rem, 1.2vw, .7rem);
+  width: min(260px, 100%);
+  min-height: clamp(62px, 8vw, 78px);
+  padding: clamp(.42rem, 1.2vw, .58rem) clamp(.55rem, 1.45vw, .78rem);
+  border-radius: 20px;
+  background: rgba(255, 249, 250, .74);
+  border: 1px solid rgba(184, 155, 99, .22);
+  box-shadow: 0 7px 16px rgba(36, 77, 86, .07);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.itinerary-v19-validated .itinerary-v19-left .itinerary-v19-card {
+  grid-column: 1;
+  justify-self: end;
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.itinerary-v19-validated .itinerary-v19-right .itinerary-v19-card {
+  grid-column: 3;
+  justify-self: start;
+  text-align: left;
+  flex-direction: row;
+}
+.itinerary-v19-validated .itinerary-v19-left .itinerary-v19-card::after,
+.itinerary-v19-validated .itinerary-v19-right .itinerary-v19-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: clamp(10px, 2.2vw, 18px);
+  height: 1.5px;
+  transform: translateY(-50%);
+  background: rgba(184, 155, 99, .46);
+}
+.itinerary-v19-validated .itinerary-v19-left .itinerary-v19-card::after { right: calc(-1 * clamp(10px, 2.2vw, 18px)); }
+.itinerary-v19-validated .itinerary-v19-right .itinerary-v19-card::after { left: calc(-1 * clamp(10px, 2.2vw, 18px)); }
+.itinerary-v19-validated .itinerary-v19-visual {
+  flex: 0 0 clamp(48px, 7.4vw, 66px);
+  width: clamp(48px, 7.4vw, 66px);
+  height: clamp(48px, 7.4vw, 66px);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.itinerary-v19-validated .itinerary-v19-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  visibility: visible;
+  filter: drop-shadow(0 2px 2px rgba(23, 63, 112, .08));
+}
+.itinerary-v19-validated .itinerary-v19-text {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #173f70;
+  min-width: 0;
+}
+.itinerary-v19-validated .itinerary-v19-time {
+  display: block;
+  font-size: clamp(.82rem, 1.8vw, .97rem);
+  font-weight: 700;
+  color: #b89b63;
+  line-height: 1.05;
+  margin-bottom: .12rem;
+  white-space: nowrap;
+}
+.itinerary-v19-validated .itinerary-v19-label {
+  display: block;
+  font-size: clamp(.74rem, 1.55vw, .9rem);
+  line-height: 1.12;
+  letter-spacing: .02em;
+}
+.itinerary-v19-validated .timeline-node,
+.itinerary-v19-validated .itinerary-node,
+.itinerary-v19-validated .bullet { display: none !important; }
+@media (max-width: 520px) {
+  .itinerary-v19-validated .itinerary-v19-timeline { width: 95%; gap: .42rem; }
+  .itinerary-v19-validated .itinerary-v19-item { grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr); min-height: 74px; }
+  .itinerary-v19-validated .itinerary-v19-card { width: min(184px, 100%); min-height: 62px; border-radius: 18px; gap: .32rem; padding: .35rem .44rem; }
+  .itinerary-v19-validated .itinerary-v19-visual { flex-basis: 40px; width: 40px; height: 40px; }
+  .itinerary-v19-validated .itinerary-v19-time { font-size: .76rem; }
+  .itinerary-v19-validated .itinerary-v19-label { font-size: .70rem; }
+}
+@media (max-width: 380px) {
+  .itinerary-v19-validated .itinerary-v19-card { width: min(164px, 100%); }
+  .itinerary-v19-validated .itinerary-v19-visual { flex-basis: 36px; width: 36px; height: 36px; }
+  .itinerary-v19-validated .itinerary-v19-label { font-size: .67rem; }
+}
+
+
+/* Ver20 - ajustes controlados de itinerario: máscara y título descendidos, textos actualizados */
+.itinerary-v19-validated .itinerary-custom-content {
+  padding-top: clamp(2.45rem, 6vw, 3.65rem);
+}
+.itinerary-v19-validated .itinerary-custom-mask {
+  margin-top: clamp(.55rem, 1.8vw, 1rem);
+  margin-bottom: clamp(.34rem, 1vw, .58rem);
+}
+.itinerary-v19-validated .itinerary-custom-title {
+  margin-top: clamp(.12rem, .8vw, .36rem);
+  margin-bottom: clamp(.42rem, 1.2vw, .72rem);
+}
+@media (max-width: 520px) {
+  .itinerary-v19-validated .itinerary-custom-content { padding-top: 2.05rem; }
+  .itinerary-v19-validated .itinerary-custom-mask { margin-top: .35rem; margin-bottom: .34rem; }
+  .itinerary-v19-validated .itinerary-custom-title { margin-top: .08rem; margin-bottom: .44rem; }
+}
+
+
+
+/* === Vestimenta integrada desde Alex XV vestimenta ver32 === */
+#vestimenta {
+  min-height: 100vh;
+  padding: clamp(1rem, 3vw, 2rem) 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dress-slide {
+  position: relative;
+  width: min(760px, 100%);
+  min-height: clamp(920px, 152vw, 1120px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(2.05rem, 5.8vw, 3.55rem) clamp(1rem, 3.8vw, 2rem) clamp(1.25rem, 3vw, 2rem);
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.36) 0%, rgba(255,255,255,.18) 36%, rgba(255,255,255,.30) 100%),
+    url("../img/img-f184bbb3d038.webp");
+  background-size: cover;
+  background-position: center center;
+  box-shadow: var(--shadow);
+}
+
+.dress-slide::before {
+  content: "";
+  position: absolute;
+  inset: clamp(0.45rem, 1.4vw, 0.75rem);
+  border: 1px solid rgba(184, 155, 99, .34);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dress-slide > * { position: relative; z-index: 1; }
+
+.dress-title {
+  margin: 0 0 clamp(.78rem, 1.8vw, 1.08rem);
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-size: clamp(3.35rem, 9.4vw, 5.85rem);
+  color: #173f70;
+  line-height: .92;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, .72);
+}
+
+.dress-request {
+  margin: 0 auto clamp(1.05rem, 2.8vw, 1.45rem);
+  width: min(660px, 94%);
+  padding: clamp(.72rem, 1.8vw, .98rem) clamp(.92rem, 2.6vw, 1.3rem);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .68);
+  border: 1px solid rgba(184, 155, 99, .28);
+  box-shadow: 0 8px 18px rgba(39, 67, 77, .08);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.02rem, 3.1vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #173f70;
+}
+
+.dress-panel {
+  width: min(680px, 94%);
+  margin: 0 auto clamp(.85rem, 2.1vw, 1.15rem);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  background: transparent;
+}
+
+.dress-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+.dress-picture {
+  display: block;
+  width: 100%;
+}
+
+.dress-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+.restricted-colors {
+  width: min(650px, 92%);
+  margin-top: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(249, 231, 228, .94);
+  box-shadow: 0 12px 24px rgba(39, 67, 77, .13);
+  border: 1px solid rgba(184, 155, 99, .18);
+  display: block;
+  flex-shrink: 0;
+}
+
+.restricted-colors img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.dress-mask {
+  display: block;
+  width: min(28%, 185px);
+  height: auto;
+  margin: 0 auto clamp(.48rem, 1.25vw, .78rem);
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(184, 155, 99, .16));
+  opacity: .96;
+}
+
+.dress-slide .dress-title {
+  margin-top: 0;
+}
+
+.dress-slide .dress-panel {
+  width: min(680px, 94%);
+}
+
+.dress-slide .restricted-colors {
+  width: min(670px, 92%);
+}
+
+@media (max-width: 520px) {
+  #vestimenta { padding: .65rem; }
+  .dress-slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 1.75rem .78rem 1rem;
+  }
+  .dress-slide::before { inset: .42rem; }
+  .dress-mask { width: min(38%, 150px); margin-bottom: .42rem; }
+  .dress-title { font-size: clamp(3.6rem, 18vw, 5.25rem); }
+  .dress-request {
+    width: 96%;
+    border-radius: 22px;
+    font-size: clamp(.98rem, 4.4vw, 1.22rem);
+  }
+  .dress-panel { width: 96%; border-radius: 0; }
+  .restricted-colors { width: 96%; border-radius: 14px; }
+}
+
+
+/* Ver32: colores restringidos sin recuadro ni background propio; círculos sobre el fondo general */
+.restricted-colors {
+  width: min(690px, 94%);
+  margin-top: auto;
+  padding: clamp(.1rem, .8vw, .35rem) 0 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  display: block;
+  flex-shrink: 0;
+}
+.restricted-copy {
+  width: 100%;
+  text-align: center;
+  color: #173f70;
+  text-shadow: 0 1px 0 rgba(255,255,255,.76);
+}
+.restricted-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 4.1vw, 2.45rem);
+  line-height: 1;
+  letter-spacing: .36em;
+  font-weight: 500;
+  margin: 0 auto .22rem;
+  padding-left: .36em;
+}
+.restricted-divider {
+  width: min(360px, 62%);
+  margin: 0 auto .18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  color: rgba(184,155,99,.86);
+}
+.restricted-divider span {
+  height: 1px;
+  flex: 1;
+  background: rgba(184,155,99,.58);
+}
+.restricted-divider strong {
+  font-size: clamp(.8rem, 2.4vw, 1.12rem);
+  line-height: 1;
+}
+.restricted-subtitle {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(.82rem, 2.35vw, 1.12rem);
+  letter-spacing: .46em;
+  font-weight: 600;
+  margin: 0 auto clamp(.72rem, 1.7vw, .95rem);
+  padding-left: .46em;
+}
+.swatch-row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(.45rem, 2.1vw, 1.05rem);
+  flex-wrap: nowrap;
+}
+.swatch-item {
+  width: 18.8%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.swatch-circle {
+  display: block;
+  width: clamp(50px, 10.2vw, 92px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.78);
+  box-shadow: 0 8px 16px rgba(39,67,77,.13), inset 0 1px 1px rgba(255,255,255,.25);
+}
+.swatch-circle.navy { background: #08234f; }
+.swatch-circle.azul { background: #1d639d; }
+.swatch-circle.celeste { background: #b9dff0; }
+.swatch-circle.beige { background: #d9c3a5; }
+.swatch-circle.champagne { background: #eee5d6; }
+.swatch-name {
+  margin-top: clamp(.28rem, .9vw, .45rem);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(.62rem, 1.85vw, .88rem);
+  letter-spacing: .24em;
+  font-weight: 700;
+  color: #173f70;
+  white-space: nowrap;
+}
+@media (max-width: 520px) {
+  .restricted-colors { width: 98%; padding-top: .1rem; }
+  .restricted-title { font-size: clamp(1.12rem, 6.2vw, 1.95rem); letter-spacing: .28em; padding-left: .28em; }
+  .restricted-subtitle { font-size: clamp(.72rem, 3.2vw, .98rem); letter-spacing: .35em; padding-left: .35em; }
+  .restricted-divider { width: 56%; gap: .4rem; }
+  .swatch-row { gap: .25rem; }
+  .swatch-circle { width: clamp(46px, 14vw, 64px); }
+  .swatch-name { font-size: clamp(.52rem, 2.35vw, .68rem); letter-spacing: .16em; }
+}
+/* === Fin Vestimenta integrada ver32 === */
+
+/* Ver03: background blanco transparente ampliado para cubrir COLORES + paleta */
+.dress-slide .restricted-colors {
+  transform: translateY(clamp(-1.15rem, -2.1vw, -1.65rem));
+}
+.dress-slide .restricted-copy {
+  width: min(640px, 94%);
+  margin: 0 auto;
+  padding: clamp(.62rem, 1.55vw, .92rem) clamp(.42rem, 1.35vw, .70rem) clamp(.42rem, 1.10vw, .62rem);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .62);
+}
+.swatch-row {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+@media (max-width: 520px) {
+  .dress-slide .restricted-colors {
+    transform: translateY(-.85rem);
+  }
+  .dress-slide .restricted-copy {
+    width: 96%;
+    padding: .56rem .32rem .38rem;
+    border-radius: 14px;
+  }
+}
+
+
+
+
+/* === Confirmación de asistencia - ver28: background floral + título estilo Itinerario/Vestimenta === */
+#confirmacion {
+  min-height: 100vh;
+  padding: clamp(1rem, 3vw, 2rem) 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #fff4f6 0%, #f9e7e4 100%);
+}
+
+#confirmacion .container {
+  position: relative;
+  width: min(760px, 100%);
+  max-width: 760px;
+  min-height: clamp(860px, 150vw, 1080px);
+  margin: 0 auto;
+  padding: clamp(2.8rem, 7vw, 4.5rem) clamp(1.15rem, 4vw, 2.4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 34px;
+  background-image: url("../img/img-889a2c7e36ff.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow);
+}
+
+#confirmacion .card,
+#confirmacion .soft-card {
+  width: min(560px, 86%);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4.6vw, 2.25rem) clamp(1rem, 4vw, 1.85rem);
+  border-radius: 28px;
+  background: rgba(255, 250, 250, 0.72);
+  border: 1px solid rgba(184, 155, 99, .18);
+  box-shadow: 0 14px 28px rgba(39, 67, 77, .11);
+  backdrop-filter: blur(2px);
+}
+
+#confirmacion .section-title,
+#confirmacion .section-title.small {
+  display: block;
+  margin: 0 auto clamp(1.05rem, 2.6vw, 1.45rem);
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-size: clamp(2.45rem, 7.1vw, 4.15rem);
+  color: #173f70;
+  line-height: .94;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, .72);
+}
+
+#confirmacion p {
+  color: #304f52;
+  font-size: clamp(1.04rem, 2.85vw, 1.28rem);
+  line-height: 1.58;
+}
+
+#confirmacion .btn {
+  margin-top: 1rem;
+}
+
+@media (max-width: 520px) {
+  #confirmacion { padding: .75rem; }
+  #confirmacion .container {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 26px;
+    padding: 2.4rem .8rem;
+  }
+  #confirmacion .card,
+  #confirmacion .soft-card {
+    width: min(92%, 430px);
+    padding: 1.28rem .95rem;
+    border-radius: 24px;
+  }
+  #confirmacion .section-title,
+  #confirmacion .section-title.small {
+    font-size: clamp(2.25rem, 13.4vw, 3.55rem);
+  }
+}
+
+
+
+/* Ajuste ver29: centrado fino del contenido dentro del recuadro oval de apertura.
+   Se conserva intacto el background, la máscara y la paleta de color. */
+.hero-cover-content {
+  top: 13.5%;
+  right: 9.5%;
+  bottom: 11.5%;
+  left: 14.5%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateX(0.6%);
+}
+
+.hero-cover-content > * {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.cover-name {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 460px) {
+  .hero-cover-content {
+    top: 14%;
+    right: 9%;
+    bottom: 11.5%;
+    left: 14%;
+    transform: translateX(0.5%);
+  }
+  .hero-mask-img {
+    width: min(72%, 320px);
+  }
+}
+
+
+/* === Ajustes ver30: compatibilidad móvil Android/iPhone, continuidad entre apertura y bienvenida, conteo robusto === */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+@supports (min-height: 100svh) {
+  section.date-section,
+  #vestimenta,
+  #confirmacion,
+  .timeline-section {
+    min-height: 100svh !important;
+  }
+}
+
+@supports (min-height: 100dvh) {
+  section.date-section,
+  #vestimenta,
+  #confirmacion,
+  .timeline-section {
+    min-height: 100dvh !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  section {
+    padding-left: .85rem;
+    padding-right: .85rem;
+  }
+
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding: .55rem .55rem .28rem !important;
+    align-items: flex-start !important;
+  }
+
+  .hero-frame {
+    width: min(94vw, 390px) !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-frame-soft {
+    border-radius: 24px !important;
+  }
+
+  .hero-art-soft {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1156 / 1600;
+    object-fit: cover;
+  }
+
+  .hero-cover-content {
+    top: 14% !important;
+    right: 9% !important;
+    bottom: 11.5% !important;
+    left: 14% !important;
+    transform: translateX(0.5%) !important;
+  }
+
+  .cover-kicker {
+    font-size: clamp(.72rem, 2.4vw, .92rem) !important;
+    letter-spacing: .32em !important;
+  }
+
+  .cover-years {
+    font-size: clamp(1.85rem, 7vw, 3rem) !important;
+  }
+
+  .cover-name {
+    font-size: clamp(2.8rem, 13.6vw, 5.1rem) !important;
+    line-height: .94 !important;
+  }
+
+  .welcome-section {
+    margin-top: 0 !important;
+    padding-top: clamp(3.1rem, 10vw, 4.4rem) !important;
+    padding-bottom: clamp(3.1rem, 10vw, 4.4rem) !important;
+  }
+
+  .welcome-card {
+    padding-top: clamp(1.05rem, 3vw, 1.35rem) !important;
+    padding-bottom: clamp(1.05rem, 3vw, 1.35rem) !important;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: .45rem !important;
+  }
+
+  .time-box {
+    padding: .78rem .2rem !important;
+    border-radius: 15px !important;
+    min-width: 0 !important;
+  }
+
+  .time-box strong {
+    font-size: clamp(1.18rem, 6vw, 1.75rem) !important;
+  }
+
+  .time-box span {
+    font-size: clamp(.56rem, 2.25vw, .68rem) !important;
+    letter-spacing: .07em !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding-top: .45rem !important;
+    padding-bottom: .2rem !important;
+  }
+
+  .cover-name {
+    font-size: clamp(2.55rem, 13.4vw, 4.75rem) !important;
+  }
+}
+
+
+
+/* === Itinerario ver31: ajustes solicitados ===
+   1) Máscara y título descendidos.
+   2) Recuadros de cada contenido eliminados.
+   3) Tipografía e íconos conservados; texto reforzado en negrilla.
+   4) Contenido contenido dentro del recuadro oval. */
+.itinerary-v19-validated .itinerary-custom-content {
+  padding-top: clamp(3.15rem, 7.6vw, 4.85rem) !important;
+  padding-right: clamp(2.25rem, 7vw, 4.6rem) !important;
+  padding-left: clamp(2.25rem, 7vw, 4.6rem) !important;
+  padding-bottom: clamp(1.15rem, 3.2vw, 2rem) !important;
+}
+.itinerary-v19-validated .itinerary-custom-mask {
+  margin-top: clamp(.75rem, 2vw, 1.25rem) !important;
+  margin-bottom: clamp(.38rem, 1.1vw, .66rem) !important;
+}
+.itinerary-v19-validated .itinerary-custom-title {
+  margin-top: clamp(.20rem, .9vw, .42rem) !important;
+  margin-bottom: clamp(.50rem, 1.35vw, .82rem) !important;
+}
+.itinerary-v19-validated .itinerary-v19-timeline {
+  width: min(600px, 84%) !important;
+  gap: clamp(.28rem, .72vw, .46rem) !important;
+  align-content: center !important;
+}
+.itinerary-v19-validated .itinerary-v19-item {
+  min-height: clamp(68px, 8.4vw, 84px) !important;
+}
+.itinerary-v19-validated .itinerary-v19-card {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+  width: min(238px, 100%) !important;
+  padding: clamp(.36rem, 1vw, .52rem) clamp(.42rem, 1.15vw, .68rem) !important;
+}
+.itinerary-v19-validated .itinerary-v19-left .itinerary-v19-card,
+.itinerary-v19-validated .itinerary-v19-right .itinerary-v19-card {
+  justify-self: center !important;
+}
+.itinerary-v19-validated .itinerary-v19-left .itinerary-v19-card::after,
+.itinerary-v19-validated .itinerary-v19-right .itinerary-v19-card::after {
+  display: none !important;
+  content: none !important;
+}
+.itinerary-v19-validated .itinerary-v19-time,
+.itinerary-v19-validated .itinerary-v19-label {
+  font-weight: 700 !important;
+}
+.itinerary-v19-validated .itinerary-v19-label {
+  color: #173f70 !important;
+}
+.itinerary-v19-validated .itinerary-v19-visual img {
+  filter: drop-shadow(0 2px 2px rgba(23, 63, 112, .13)) !important;
+}
+@media (max-width: 520px) {
+  .itinerary-v19-validated .itinerary-custom-content {
+    padding-top: 2.65rem !important;
+    padding-left: 1.35rem !important;
+    padding-right: 1.35rem !important;
+    padding-bottom: 1.05rem !important;
+  }
+  .itinerary-v19-validated .itinerary-custom-mask {
+    margin-top: .55rem !important;
+    margin-bottom: .36rem !important;
+  }
+  .itinerary-v19-validated .itinerary-custom-title {
+    margin-top: .10rem !important;
+    margin-bottom: .48rem !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-timeline {
+    width: 86% !important;
+    gap: .34rem !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-item {
+    min-height: 70px !important;
+    grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr) !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-card {
+    width: min(158px, 100%) !important;
+    min-height: 58px !important;
+    padding: .30rem .28rem !important;
+    gap: .24rem !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-visual {
+    flex-basis: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-time {
+    font-size: .76rem !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-label {
+    font-size: .70rem !important;
+    line-height: 1.08 !important;
+  }
+}
+@media (max-width: 380px) {
+  .itinerary-v19-validated .itinerary-custom-content {
+    padding-left: 1.10rem !important;
+    padding-right: 1.10rem !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-timeline {
+    width: 84% !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-card {
+    width: min(146px, 100%) !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-visual {
+    flex-basis: 38px !important;
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-label {
+    font-size: .67rem !important;
+  }
+}
+
+
+/* === Itinerario ver32: líneas horizontales de conexión actividad-línea de tiempo ===
+   Mantiene los ajustes aprobados de ver31; solo agrega conectores visuales. */
+.itinerary-v19-validated .itinerary-v19-card {
+  z-index: 2 !important;
+}
+.itinerary-v19-validated .itinerary-v19-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 1.8px;
+  width: clamp(30px, 6vw, 44px);
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, rgba(184,155,99,.22), rgba(184,155,99,.68), rgba(184,155,99,.22));
+  border-radius: 999px;
+  z-index: 1;
+  pointer-events: none;
+}
+.itinerary-v19-validated .itinerary-v19-left::after {
+  right: 50%;
+}
+.itinerary-v19-validated .itinerary-v19-right::after {
+  left: 50%;
+}
+@media (max-width: 520px) {
+  .itinerary-v19-validated .itinerary-v19-item::after {
+    width: clamp(18px, 4.4vw, 28px);
+    height: 1.6px;
+  }
+}
+@media (max-width: 380px) {
+  .itinerary-v19-validated .itinerary-v19-item::after {
+    width: 18px;
+  }
+}
+
+
+
+/* === Itinerario ver33: centrado vertical fino dentro del marco oval ===
+   Se mantiene intacto el diseño aprobado de ver32. Solo se corrige:
+   - menor espacio entre el título Itinerario y la primera actividad (7:00 pm)
+   - grupo completo centrado dentro del marco oval
+   - máscara y título ligeramente más abajo, sin alterar colores, iconos ni conectores */
+.itinerary-v19-validated .itinerary-custom-content {
+  justify-content: center !important;
+  padding-top: clamp(2.65rem, 5.4vw, 3.95rem) !important;
+  padding-bottom: clamp(1.75rem, 3.2vw, 2.55rem) !important;
+  padding-left: clamp(2.25rem, 7vw, 4.6rem) !important;
+  padding-right: clamp(2.25rem, 7vw, 4.6rem) !important;
+}
+.itinerary-v19-validated .itinerary-custom-mask {
+  margin-top: 0 !important;
+  margin-bottom: clamp(.26rem, .72vw, .48rem) !important;
+}
+.itinerary-v19-validated .itinerary-custom-title {
+  margin-top: 0 !important;
+  margin-bottom: clamp(.10rem, .42vw, .24rem) !important;
+}
+.itinerary-v19-validated .itinerary-v19-timeline {
+  flex: 0 0 auto !important;
+  align-content: start !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+@media (max-width: 520px) {
+  .itinerary-v19-validated .itinerary-custom-content {
+    justify-content: center !important;
+    padding-top: 2.85rem !important;
+    padding-bottom: 1.35rem !important;
+    padding-left: 1.35rem !important;
+    padding-right: 1.35rem !important;
+  }
+  .itinerary-v19-validated .itinerary-custom-mask {
+    margin-top: 0 !important;
+    margin-bottom: .24rem !important;
+  }
+  .itinerary-v19-validated .itinerary-custom-title {
+    margin-top: 0 !important;
+    margin-bottom: .12rem !important;
+  }
+  .itinerary-v19-validated .itinerary-v19-timeline {
+    flex: 0 0 auto !important;
+    align-content: start !important;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 380px) {
+  .itinerary-v19-validated .itinerary-custom-content {
+    padding-top: 2.55rem !important;
+    padding-bottom: 1.10rem !important;
+    padding-left: 1.10rem !important;
+    padding-right: 1.10rem !important;
+  }
+  .itinerary-v19-validated .itinerary-custom-title {
+    margin-bottom: .10rem !important;
+  }
+}
+
+
+/* === Ver32 - unificación de títulos desde Celebremos hasta la diapositiva final ===
+   Estilo base tomado de "Itinerario":
+   font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+   font-size: clamp(2.25rem, 6.4vw, 4.1rem);
+   color: #173f70;
+*/
+body section h2.script.section-title,
+body section h2.script.section-title.small,
+body section h2.script.itinerary-custom-title,
+body section h1.dress-title {
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive !important;
+  font-weight: 400 !important;
+  font-size: clamp(2.25rem, 6.4vw, 4.1rem) !important;
+  color: #173f70 !important;
+  line-height: .95 !important;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, .72) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+@media (max-width: 560px) {
+  body section h2.script.section-title,
+  body section h2.script.section-title.small,
+  body section h2.script.itinerary-custom-title,
+  body section h1.dress-title {
+    font-size: clamp(2.1rem, 10vw, 3.05rem) !important;
+  }
+}
+
+
+
+/* === Ver33 - ajuste específico de la diapositiva 2: Celebremos ===
+   Se restaura el recuadro del título, conservando la tipografía/tamaño/color
+   homologados al estilo de Itinerario. Además, todo el texto de la sección
+   se fija en #173f70. */
+section#bienvenida,
+section#bienvenida .container,
+section#bienvenida .card,
+section#bienvenida .welcome-card,
+section#bienvenida p {
+  color: #173f70 !important;
+}
+
+section#bienvenida h2.script.section-title {
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive !important;
+  font-weight: 400 !important;
+  font-size: clamp(2.25rem, 6.4vw, 4.1rem) !important;
+  color: #173f70 !important;
+  line-height: .95 !important;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, .72) !important;
+  display: inline-block !important;
+  background: rgba(255, 255, 255, 0.30) !important;
+  border: 1px solid rgba(23, 63, 112, 0.16) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  padding: .18rem 1rem .28rem !important;
+}
+
+@media (max-width: 560px) {
+  section#bienvenida h2.script.section-title {
+    font-size: clamp(2.1rem, 10vw, 3.05rem) !important;
+  }
+}
+
+
+
+/* === Ver34 - ajuste específico de la diapositiva 3: Gracias a Dios ===
+   Se aplica sin cambios el mismo procedimiento usado en Celebremos:
+   recuadro del título restaurado, manteniendo tipografía/tamaño/color
+   homologados al estilo de Itinerario. Todo el contenido textual queda en #173f70. */
+section#oracion,
+section#oracion .container,
+section#oracion .card,
+section#oracion .welcome-card,
+section#oracion p,
+section#oracion .prayer {
+  color: #173f70 !important;
+}
+
+section#oracion h2.script.section-title,
+section#oracion h2.script.section-title.small {
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive !important;
+  font-weight: 400 !important;
+  font-size: clamp(2.25rem, 6.4vw, 4.1rem) !important;
+  color: #173f70 !important;
+  line-height: .95 !important;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, .72) !important;
+  display: inline-block !important;
+  background: rgba(255, 255, 255, 0.30) !important;
+  border: 1px solid rgba(23, 63, 112, 0.16) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  padding: .18rem 1rem .28rem !important;
+}
+
+@media (max-width: 560px) {
+  section#oracion h2.script.section-title,
+  section#oracion h2.script.section-title.small {
+    font-size: clamp(2.1rem, 10vw, 3.05rem) !important;
+  }
+}
+
+
+
+/* === Ver35 - ajuste específico de la diapositiva Fecha ===
+   Cambio de título a "Fecha" y fecha principal en una sola línea.
+   El tamaño de "Viernes 31.07.2026" queda ligeramente menor que el título. */
+section#fecha .date-main {
+  font-size: clamp(1.95rem, 5.6vw, 3.55rem) !important;
+  line-height: 1.02 !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 560px) {
+  section#fecha .date-main {
+    font-size: clamp(1.72rem, 8.3vw, 2.58rem) !important;
+  }
+}
+
+
+/* === Ver36 - ajuste específico de color en diapositivas Fecha y Lugar ===
+   Se aplica #173f70 al texto/contenido textual de Fecha y Lugar.
+   Se conserva el resto de estructura, tamaños, fondos, botones y estilos previos. */
+section#fecha,
+section#fecha .card,
+section#fecha h2,
+section#fecha .section-title,
+section#fecha .date-main,
+section#fecha .date-time-range,
+section#fecha .date-time-range strong,
+section#fecha .countdown-heading,
+section#fecha .time-box strong,
+section#fecha .time-box span {
+  color: #173f70 !important;
+}
+
+section#lugar,
+section#lugar .location-card,
+section#lugar .section-title,
+section#lugar h2,
+section#lugar h3,
+section#lugar p,
+section#lugar a,
+section#lugar .btn {
+  color: #173f70 !important;
+}
+
+
+
+/* === Ajuste ver37: botones activos ===
+   Botones con relleno azul #173f70 y texto blanco.
+   Se aplica a los botones de acción: Ver ubicación y Confirmar por WhatsApp. */
+a.btn,
+a.btn:visited,
+a.btn:hover,
+a.btn:active,
+a.btn:focus {
+  background: #173f70 !important;
+  color: #ffffff !important;
+}
+
+.btn {
+  background: #173f70 !important;
+  color: #ffffff !important;
+}
+
+.btn * {
+  color: #ffffff !important;
+}
+/* === Fin ajuste ver37 === */
+
+
+
+/* === Ajuste ver38: validación botón Lugar ===
+   Refuerza específicamente el botón Ver ubicación para que el texto sea blanco,
+   sin modificar el resto del contenido de la diapositiva Lugar. */
+section#lugar a.btn,
+section#lugar a.btn:visited,
+section#lugar a.btn:hover,
+section#lugar a.btn:active,
+section#lugar a.btn:focus {
+  background: #173f70 !important;
+  color: #ffffff !important;
+}
+/* === Fin ajuste ver38 === */
+
+
+
+/* === Ver44 - ajuste Sugerencia de regalo ===
+   Se agrega el background adjunto a la última diapositiva.
+   Se conserva título, card y estilo tipográfico original del texto. */
+section#regalo {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/img-1ab083c3f968.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* === Fin ajuste ver44 === */
+
+
+
+/* Ajuste ver47: última diapositiva centrada y responsive en computadora, tablet y teléfono. */
+.te-esperamos-slide {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    padding: clamp(0.45rem, 1.8vw, 1.2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #fff4f6 0%, #ffffff 100%);
+  }
+  .final-frame {
+    position: relative;
+    width: min(1180px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh - clamp(0.9rem, 3.6vw, 2.4rem));
+    min-height: calc(100svh - clamp(0.9rem, 3.6vw, 2.4rem));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: clamp(24px, 5vw, 42px);
+    background-image: url("../img/img-24dc198aa6a6.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: var(--shadow);
+  }
+  .final-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(255, 244, 246, 0.28), transparent 38%),
+      linear-gradient(180deg, rgba(255, 244, 246, 0.05), rgba(245, 228, 232, 0.16));
+  }
+  .final-title {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    width: min(96%, 920px);
+    text-align: center;
+    font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+    font-size: clamp(3.25rem, 10.2vw, 6.9rem);
+    font-weight: 400;
+    line-height: 0.92;
+    color: #173f70;
+    text-shadow: 0 2px 0 rgba(255, 255, 255, .72);
+    padding: clamp(0.85rem, 2.9vw, 1.35rem) clamp(0.9rem, 3.4vw, 2rem);
+    border-radius: clamp(18px, 4vw, 28px);
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(0.8px);
+  }
+  @media (min-width: 601px) and (max-width: 1180px) {
+    .te-esperamos-slide {
+      padding-left: clamp(0.65rem, 2.2vw, 1.2rem);
+      padding-right: clamp(0.65rem, 2.2vw, 1.2rem);
+    }
+    .final-frame {
+      width: 100%;
+      background-position: center center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .te-esperamos-slide { padding: 0; }
+    .final-frame {
+      width: 100vw;
+      min-height: 100vh;
+      min-height: 100svh;
+      border-radius: 0;
+      box-shadow: none;
+      background-size: cover;
+      background-position: center center;
+    }
+    .final-title {
+      width: 96%;
+      background: rgba(255, 255, 255, 0.24);
+      padding-top: 0.95rem;
+      padding-bottom: 1.05rem;
+    }
+  }
+
+
+/* === Ver48 - ajuste diapositiva Lluvia de sobres ===
+   Se actualiza el título, se conserva el formato homologado y se aclara el fondo rosado.
+   El cambio aplica únicamente a la diapositiva de regalo. */
+section#regalo {
+  background-color: #fff4f7 !important;
+  background-blend-mode: screen !important;
+}
+
+section#regalo,
+section#regalo .card,
+section#regalo .soft-card,
+section#regalo .section-title,
+section#regalo h2,
+section#regalo p,
+section#regalo .icon-large {
+  color: #173f70 !important;
+}
+
+section#regalo .section-title {
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive !important;
+  font-size: clamp(2.25rem, 6.4vw, 4.1rem) !important;
+  color: #173f70 !important;
+}
+/* === Fin ajuste ver48 === */
+
+
+
+/* === Ver49 - integración de Lluvia de sobres independiente ver04 ===
+   Ajuste restringido únicamente a section#regalo. */
+section#regalo {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(3.4rem, 8vw, 5.2rem) 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/img-1ab083c3f968.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+section#regalo .container {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+section#regalo .card {
+  width: min(700px, 100%);
+  margin: 0 auto;
+  padding: clamp(1.6rem, 5vw, 2.4rem) clamp(1.2rem, 4vw, 2rem);
+  border-radius: 30px;
+  background: rgba(245, 228, 232, .92);
+  box-shadow: var(--shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section#regalo .soft-card {
+  background: rgba(245, 228, 232, .92);
+}
+
+section#regalo .icon-large {
+  font-size: clamp(3rem, 10vw, 3.7rem);
+  margin-bottom: 1rem;
+  color: #ffffff !important;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(23, 63, 112, .14);
+}
+
+section#regalo .section-title,
+section#regalo .section-title.small {
+  display: inline-block;
+  margin: 0 auto 1.8rem;
+  padding: 0;
+  background: transparent !important;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-size: clamp(2.25rem, 6.4vw, 4.1rem);
+  color: #173f70 !important;
+  line-height: .95;
+  text-align: center;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, .72);
+}
+
+section#regalo .card p {
+  width: min(600px, 100%);
+  margin: 0 auto;
+  font-size: clamp(1.03rem, 2.8vw, 1.33rem);
+  line-height: 1.72;
+  color: #173f70 !important;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  section#regalo {
+    padding: 2.25rem 1rem;
+    background-position: center center;
+  }
+
+  section#regalo .card {
+    border-radius: 26px;
+    padding: 1.55rem 1.05rem 1.75rem;
+  }
+
+  section#regalo .section-title,
+  section#regalo .section-title.small {
+    margin-bottom: 1.25rem;
+    font-size: clamp(2.1rem, 10vw, 3.05rem);
+  }
+}
+/* === Fin ajuste ver57 === */
+
+
+/* === Ver50 - validación final Lluvia de sobres ===
+   Corrección: fuerza el background acordado y desactiva el blend anterior que lo aclaraba en exceso.
+   Ajuste restringido únicamente a section#regalo. */
+section#regalo {
+  min-height: 100vh !important;
+  min-height: 100svh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-image: url("../img/img-1ab083c3f968.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: #fff4f7 !important;
+  background-blend-mode: normal !important;
+}
+
+section#regalo .container {
+  width: min(980px, 100%) !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+section#regalo .card,
+section#regalo .soft-card {
+  width: min(700px, 100%) !important;
+  margin: 0 auto !important;
+  background: rgba(245, 228, 232, .92) !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+section#regalo .icon-large {
+  color: #ffffff !important;
+  text-align: center !important;
+}
+
+section#regalo .section-title,
+section#regalo .section-title.small {
+  display: inline-block !important;
+  margin: 0 auto 1.8rem !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive !important;
+  font-weight: 400 !important;
+  font-size: clamp(2.25rem, 6.4vw, 4.1rem) !important;
+  color: #173f70 !important;
+  line-height: .95 !important;
+  text-align: center !important;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, .72) !important;
+}
+
+section#regalo .card p {
+  width: min(600px, 100%) !important;
+  margin: 0 auto !important;
+  color: #173f70 !important;
+  text-align: center !important;
+}
+
+@media (max-width: 600px) {
+  section#regalo {
+    padding: 2.25rem 1rem !important;
+    background-position: center center !important;
+  }
+
+  section#regalo .section-title,
+  section#regalo .section-title.small {
+    margin-bottom: 1.25rem !important;
+    font-size: clamp(2.1rem, 10vw, 3.05rem) !important;
+  }
+}
+/* === Fin ajuste ver57 === */
+
+
+/* === Ver57 - ajuste responsive móvil de Vestimenta ===
+   Objetivo: centrar la diapositiva en teléfono, ampliar visualmente los íconos de vestimenta
+   y reducir el espacio vertical entre la imagen principal y la paleta de colores restringidos. */
+@media (max-width: 520px) {
+  #vestimenta {
+    min-height: 100svh;
+    padding: 0;
+    align-items: center;
+  }
+
+  .dress-slide {
+    width: 100%;
+    min-height: 100svh;
+    padding: .85rem .62rem .75rem;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .dress-slide::before {
+    inset: .34rem;
+  }
+
+  .dress-mask {
+    width: min(30%, 116px);
+    margin-bottom: .10rem;
+  }
+
+  .dress-title {
+    font-size: clamp(3.25rem, 16.4vw, 4.55rem);
+    margin-bottom: .35rem;
+  }
+
+  .dress-panel,
+  .dress-slide .dress-panel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto .62rem;
+    flex-shrink: 0;
+  }
+
+  .dress-panel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .restricted-colors,
+  .dress-slide .restricted-colors {
+    width: 94%;
+    margin-top: 0;
+    transform: none !important;
+  }
+
+  .dress-slide .restricted-copy {
+    width: 100%;
+    padding: .48rem .34rem .32rem;
+    border-radius: 15px;
+  }
+
+  .restricted-title {
+    font-size: clamp(1.12rem, 5.8vw, 1.58rem);
+    letter-spacing: .28em;
+    padding-left: .28em;
+    margin-bottom: .12rem;
+  }
+
+  .restricted-divider {
+    width: 56%;
+    margin-bottom: .08rem;
+    gap: .38rem;
+  }
+
+  .restricted-subtitle {
+    font-size: clamp(.64rem, 3vw, .88rem);
+    letter-spacing: .34em;
+    padding-left: .34em;
+    margin-bottom: .45rem;
+  }
+
+  .swatch-row {
+    gap: .28rem;
+  }
+
+  .swatch-circle {
+    width: clamp(44px, 13vw, 58px);
+  }
+
+  .swatch-name {
+    font-size: clamp(.49rem, 2.25vw, .62rem);
+    letter-spacing: .14em;
+  }
+}
+
+@media (max-width: 390px) {
+  .dress-panel,
+  .dress-slide .dress-panel {
+    width: 100%;
+  }
+
+  .dress-mask {
+    width: min(28%, 106px);
+  }
+
+  .dress-title {
+    font-size: clamp(3.05rem, 15.8vw, 4.35rem);
+    margin-bottom: .30rem;
+  }
+
+  .swatch-row {
+    gap: .20rem;
+  }
+
+  .swatch-circle {
+    width: clamp(40px, 12.4vw, 52px);
+  }
+
+  .swatch-name {
+    font-size: clamp(.46rem, 2vw, .57rem);
+    letter-spacing: .12em;
+  }
+}
+
+
+
+/* === Ver62 - ajuste puntual responsive móvil de Vestimenta ===
+   Se amplía ligeramente la máscara en teléfono, manteniendo igual el resto de la composición. */
+@media (max-width: 520px) {
+  #vestimenta {
+    min-height: 100svh;
+    padding: 0;
+    align-items: center;
+  }
+
+  .dress-slide {
+    min-height: 100svh;
+    padding: .72rem .62rem .68rem;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+
+  .dress-slide::before {
+    inset: .34rem;
+  }
+
+  .dress-mask {
+    width: min(32%, 126px);
+    margin: 0 auto;
+  }
+
+  .dress-title {
+    font-size: clamp(3.25rem, 16.4vw, 4.55rem);
+    margin: 0;
+  }
+
+  .dress-panel,
+  .dress-slide .dress-panel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  .restricted-colors,
+  .dress-slide .restricted-colors {
+    width: 94%;
+    margin: 0 auto;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .dress-mask {
+    width: min(30%, 116px);
+  }
+
+  .dress-title {
+    font-size: clamp(3.05rem, 15.8vw, 4.35rem);
+    margin: 0;
+  }
+}
+/* === Fin ajuste ver62 === */
+
+
+
+/* === Ver63 - ajuste fino responsive móvil de Vestimenta ===
+   Se baja ligeramente la máscara en teléfonos sin modificar el resto de elementos.
+   El desplazamiento usa svh para mantener proporción estable en iPhone y Android. */
+@media (max-width: 520px) {
+  .dress-mask {
+    transform: translateY(clamp(8px, 1.4svh, 13px));
+  }
+}
+
+@media (max-width: 390px) {
+  .dress-mask {
+    transform: translateY(clamp(7px, 1.25svh, 11px));
+  }
+}
+/* === Fin ajuste ver63 === */
+
+/* === Ver64 - actualización de imagen móvil de Vestimenta ===
+   Se reemplazó solo la imagen fuente móvil del panel para alargar verticalmente
+   los íconos de vestimenta, sin ensancharlos ni modificar iPad/escritorio. */
+
+
+/* === Ver65 - ajuste fino iPhone/Android de Vestimenta ===
+   Se mantiene fija la máscara y se suben solo el título, el panel de íconos
+   y el bloque inferior de colores para mejorar la distribución móvil. */
+@media (max-width: 520px) {
+  .dress-title {
+    transform: translateY(clamp(-30px, -3.1svh, -20px));
+  }
+
+  .dress-panel,
+  .dress-slide .dress-panel {
+    transform: translateY(clamp(-28px, -2.9svh, -18px));
+  }
+
+  .restricted-colors,
+  .dress-slide .restricted-colors {
+    transform: translateY(clamp(-26px, -2.65svh, -17px)) !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .dress-title {
+    transform: translateY(clamp(-27px, -3svh, -19px));
+  }
+
+  .dress-panel,
+  .dress-slide .dress-panel {
+    transform: translateY(clamp(-25px, -2.75svh, -17px));
+  }
+
+  .restricted-colors,
+  .dress-slide .restricted-colors {
+    transform: translateY(clamp(-23px, -2.45svh, -16px)) !important;
+  }
+}
+/* === Fin ajuste ver65 === */
+
+/* === Ver66 - ajuste adicional iPhone/Android de Vestimenta ===
+   Se conserva fija la máscara. Se suben progresivamente el título, el panel de íconos
+   y el bloque de colores en teléfonos medianos/altos; en pantallas cortas se evita
+   sobreponer el título con la máscara. */
+@media (max-width: 520px) and (min-height: 800px) {
+  .dress-title {
+    transform: translateY(clamp(-50px, -5.05svh, -40px));
+  }
+
+  .dress-panel,
+  .dress-slide .dress-panel {
+    transform: translateY(clamp(-72px, -7.5svh, -58px));
+  }
+
+  .restricted-colors,
+  .dress-slide .restricted-colors {
+    transform: translateY(clamp(-88px, -9.3svh, -72px)) !important;
+  }
+}
+
+@media (max-width: 520px) and (min-height: 700px) and (max-height: 799px) {
+  .dress-title {
+    transform: translateY(clamp(-34px, -4.1svh, -28px));
+  }
+
+  .dress-panel,
+  .dress-slide .dress-panel {
+    transform: translateY(clamp(-50px, -5.8svh, -43px));
+  }
+
+  .restricted-colors,
+  .dress-slide .restricted-colors {
+    transform: translateY(clamp(-60px, -7.2svh, -50px)) !important;
+  }
+}
+
+@media (max-width: 390px) and (min-height: 800px) {
+  .dress-title {
+    transform: translateY(clamp(-46px, -4.9svh, -39px));
+  }
+
+  .dress-panel,
+  .dress-slide .dress-panel {
+    transform: translateY(clamp(-68px, -7.15svh, -56px));
+  }
+
+  .restricted-colors,
+  .dress-slide .restricted-colors {
+    transform: translateY(clamp(-82px, -8.8svh, -68px)) !important;
+  }
+}
+/* === Fin ajuste ver66 === */
+
+
+
+/* === Ajuste ver68: centrado real de portada móvil dentro del óvalo ===
+   Se corrige el desplazamiento horizontal del bloque interno para que máscara,
+   textos y ornamento queden centrados dentro del frame oval en iPhone/Android.
+   No se modifican tamaños ni el resto de diapositivas. */
+@media (max-width: 520px) {
+  .hero-cover-content {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    transform: translate(-1.5%, 2.9%) !important;
+  }
+  .hero-cover-content > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  .cover-name {
+    text-align: center !important;
+  }
+}
+
+
+/* === Ajuste ver69: centrado óptico específico del texto "Celebración de / XV Años" ===
+   Se ajusta únicamente este texto en portada móvil. No se mueve máscara,
+   nombre, ornamento, fondo ni el resto de diapositivas. */
+@media (max-width: 520px) {
+  .cover-kicker,
+  .cover-years {
+    position: relative !important;
+    left: clamp(3px, 1vw, 4px) !important;
+  }
+}
+/* === Fin ajuste ver69 === */
+
+.countdown-finished {
+  grid-column: 1 / -1;
+  font-weight: 700;
+  color: #076f84;
+  padding: 0.85rem;
+  text-align: center;
+}
